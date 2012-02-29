@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{44b03e04-58f4-41b6-b403-c2cf17df6d91}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>PyGraph.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>PythonApplication1</Name>
+    <RootNamespace>PythonApplication1</RootNamespace>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <CommandLineArguments>c:\Python27\_my_scripts\ICW_BL1_1ms.dat c:\Python27\_my_scripts\ICW_BL2_1ms.dat c:\Python27\_my_scripts\MC_BL_1ms.dat c:\Python27\_my_scripts\ICW_BL1_5ms.dat c:\Python27\_my_scripts\ICW_BL2_5ms.dat c:\Python27\_my_scripts\MC_BL_5ms.dat</CommandLineArguments>
+    <InterpreterPath />
+    <InterpreterArguments />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="hw1.py" />
+    <Compile Include="practice.py" />
+    <Compile Include="PyGraph.py" />
+    <Compile Include="test_module.py" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
+</Project>

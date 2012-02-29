@@ -11,6 +11,7 @@ import sys
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 ###############################################################################
 # read values from a file
 # and split the fields into separate lists
@@ -76,13 +77,15 @@ for file in open_files():
       plt.plot(y, 'r.')
       plt.ylabel("Time in Milliseconds")
       plt.title(file+label)
-   elif np.average(test_us) >= 10.0:
+      print file+label
+   elif np.average(y_us) >= 10.0:
       y = y_us
       label = "\nmin="+y_us_min+" max="+y_us_max+ " avg="+y_us_avg\
       +"\nstd_dev="+str(np.std(y))+"\nvar="+str(np.var(y))
       plt.plot(y, 'r.')
       plt.ylabel("Time in Microseconds")
       plt.title(file+label)
+      print file+label
    else:
       y = y_ns
       label = "\nmin="+y_ns_min+" max="+y_ns_max+ " avg="+y_ns_avg\
@@ -90,6 +93,7 @@ for file in open_files():
       plt.plot(y, 'r.')
       plt.ylabel("Time in Nanoseconds")
       plt.title(file+label)
+      print file+label
 
    plt.xlabel("Samples")
    plt.show()
