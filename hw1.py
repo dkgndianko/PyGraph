@@ -13,8 +13,8 @@ sensor_right = 1.0
 p_move = 1.0
 
 def show(p):
-    for i in range(len(p)):
-        print p[i]
+    for a in p:
+        print(a)
 
 #DO NOT USE IMPORT
 #ENTER CODE BELOW HERE
@@ -29,10 +29,9 @@ def init():
     y = len(colors[0])
     x = len(colors)
     total_cells = x*y
+    l=[1.0/total_cells for j in range(y)]
     for i in range(x):
-        p.append([])
-        for j in range(y):
-            p[i].append(1.0/total_cells)
+        p.append(l.copy())
     return p
 
 def sense(p, Z):
